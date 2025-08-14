@@ -1,0 +1,2130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amos Nyamai - Multi-Disciplinary Tech Leader & AI Specialist</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --dark-gradient: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            --text-primary: #2c3e50;
+            --text-secondary: #7f8c8d;
+            --white: #ffffff;
+            --light-bg: rgba(255, 255, 255, 0.95);
+            --card-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            --card-shadow-hover: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--primary-gradient);
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Enhanced Header & Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(15px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--primary-gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Enhanced Hero Section */
+        .hero {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)" /></svg>');
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: slideUp 1s ease forwards;
+            line-height: 1.1;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: slideUp 1s ease 0.2s forwards;
+            font-weight: 300;
+        }
+
+        .specialties {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: slideUp 1s ease 0.4s forwards;
+        }
+
+        .specialty-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .specialty-tag:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image-placeholder {
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            text-align: center;
+            opacity: 0;
+            animation: slideUp 1s ease 0.6s forwards;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            opacity: 0;
+            animation: slideUp 1s ease 0.8s forwards;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-primary {
+            background: var(--secondary-gradient);
+            color: white;
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        /* Enhanced Section Styles - Reduced spacing */
+        .section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section:nth-child(even) {
+            background: var(--light-bg);
+        }
+
+        .section:nth-child(odd) {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 500px;
+            background: var(--accent-gradient);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+            text-align: center;
+        }
+
+        .about-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .about-text h3 {
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        /* Certifications Section */
+        .certifications-section {
+            background: var(--dark-gradient);
+            color: white;
+            padding: 80px 0;
+            margin: 3rem 0;
+            border-radius: 30px;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .certification-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .certification-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .certification-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .certification-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #4facfe;
+        }
+
+        .certification-issuer {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .cert-btn {
+            background: var(--accent-gradient);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cert-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(79, 172, 254, 0.3);
+        }
+
+        /* Enhanced Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .skills-sidebar {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            height: fit-content;
+        }
+
+        .skills-sidebar h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            border-left: 5px solid transparent;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--card-shadow-hover);
+        }
+
+        .skill-category:nth-child(1) { border-left-color: #667eea; }
+        .skill-category:nth-child(2) { border-left-color: #f093fb; }
+        .skill-category:nth-child(3) { border-left-color: #4facfe; }
+        .skill-category:nth-child(4) { border-left-color: #43e97b; }
+        .skill-category:nth-child(5) { border-left-color: #fa54c6; }
+        .skill-category:nth-child(6) { border-left-color: #38ef7d; }
+
+        .skill-category h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-tag {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            transform: scale(1.05);
+        }
+
+        /* AI & Data Analytics Detailed Section */
+        .ai-showcase {
+            background: var(--dark-gradient);
+            color: white;
+            padding: 80px 0;
+            margin: 3rem 0;
+            border-radius: 30px;
+        }
+
+        .ai-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .ai-text h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            font-weight: 800;
+        }
+
+        .ai-features {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .ai-feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+        }
+
+        .ai-feature h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #4facfe;
+        }
+
+        .ai-visual {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .ai-demo-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            text-align: center;
+            aspect-ratio: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Enhanced Experience Timeline - Side by Side Design with Same Y-Level */
+        .experience-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 3rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary-gradient);
+            border-radius: 2px;
+        }
+
+        .timeline-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .timeline-item {
+            width: 45%;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+            position: relative;
+        }
+
+        .timeline-item.left {
+            text-align: right;
+        }
+
+        .timeline-item.right {
+            text-align: left;
+        }
+
+        .timeline-item.single {
+            width: 45%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--primary-gradient);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+            z-index: 10;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .timeline-item.left .timeline-content {
+            border-right: 4px solid transparent;
+            border-image: var(--primary-gradient) 1;
+        }
+
+        .timeline-item.right .timeline-content {
+            border-left: 4px solid transparent;
+            border-image: var(--primary-gradient) 1;
+        }
+
+        .timeline-item.single .timeline-content {
+            border-left: 4px solid transparent;
+            border-image: var(--primary-gradient) 1;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--card-shadow-hover);
+        }
+
+        /* Timeline connector arrows */
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            width: 0;
+            height: 0;
+            border: 15px solid transparent;
+        }
+
+        .timeline-item.left .timeline-content::before {
+            right: -30px;
+            border-left-color: white;
+        }
+
+        .timeline-item.right .timeline-content::before {
+            left: -30px;
+            border-right-color: white;
+        }
+
+        .timeline-item.single .timeline-content::before {
+            left: -30px;
+            border-right-color: white;
+        }
+
+        .timeline-date {
+            display: inline-block;
+            background: var(--primary-gradient);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-role {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-company {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .timeline-achievements {
+            list-style: none;
+            padding: 0;
+            flex-grow: 1;
+        }
+
+        .timeline-achievements li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .timeline-achievements li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        /* Leadership Section */
+        .leadership-showcase {
+            background: var(--secondary-gradient);
+            color: white;
+            padding: 80px 0;
+            margin: 3rem 0;
+            border-radius: 30px;
+        }
+
+        .leadership-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .leadership-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+        }
+
+        .leadership-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .leadership-stat {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+        }
+
+        .leadership-stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: #9ecbf8;
+        }
+
+        .leadership-roles {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .leadership-role {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+        }
+
+        .leadership-role h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #9bc7ec;
+        }
+
+        .leadership-role .role-org {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+        }
+
+        .leadership-achievements {
+            list-style: none;
+            padding: 0;
+        }
+
+        .leadership-achievements li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .leadership-achievements li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ec5555;
+            font-weight: bold;
+        }
+
+        /* Enhanced Projects Section */
+        .projects-filter {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 2rem;
+            background: transparent;
+            border: 2px solid #667eea;
+            color: #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 3rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            display: none;
+        }
+
+        .project-card.show {
+            display: block;
+        }
+
+        .project-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--card-shadow-hover);
+        }
+
+        .project-media {
+            height: 280px;
+            background: var(--primary-gradient);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-media::before {
+            content: 'IMAGE/VIDEO PLACEHOLDER\A📱 💻 🔧 📊';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.1rem;
+            color: white;
+            text-align: center;
+            white-space: pre-line;
+            font-weight: 600;
+        }
+
+        .project-content {
+            padding: 2.5rem;
+        }
+
+        .project-category {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 0.3rem 1rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .tech-tag {
+            background: #f8f9fa;
+            color: var(--text-secondary);
+            padding: 0.4rem 1rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .link-demo {
+            background: var(--primary-gradient);
+            color: white;
+        }
+
+        .link-code {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .project-link:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Enhanced Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            height: fit-content;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow-hover);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .contact-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #667eea;
+        }
+
+        /* Animations */
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .specialties {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-content,
+            .skills-container,
+            .ai-content,
+            .leadership-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-filter {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .timeline::before {
+                left: 15px;
+                transform: none;
+            }
+
+            .timeline-row {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 60px;
+            }
+            
+            .timeline-item {
+                width: 100% !important;
+                text-align: left !important;
+                margin-bottom: 2rem;
+            }
+
+            .timeline-marker {
+                left: -35px !important;
+                transform: none !important;
+            }
+
+            .timeline-content {
+                min-height: auto !important;
+                border-left: 4px solid transparent !important;
+                border-right: none !important;
+                border-image: var(--primary-gradient) 1 !important;
+            }
+
+            .timeline-content::before {
+                display: none !important;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .nav-links {
+                display: none;
+            }
+
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .leadership-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">AMOS NYAMAI</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#ai-expertise">AI & Data</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#leadership">Leadership</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>AMOS MWENDWA NYAMAI</h1>
+                    <p class="subtitle">Multi-Disciplinary Tech Leader, AI Specialist & Transformational Leader</p>
+                    <div class="specialties">
+                        <div class="specialty-tag">AI & ML Engineer</div>
+                        <div class="specialty-tag">Data Scientist</div>
+                        <div class="specialty-tag">Software Engineer</div>
+                        <div class="specialty-tag">Transformational Leader</div>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="cta-button cta-primary">View My Work</a>
+                        <a href="#contact" class="cta-button cta-secondary">Let's Connect</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image-placeholder">
+                        <div>
+                            <strong>Professional Headshot</strong><br>
+                            High-quality portrait<br>
+                            (400x400px)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate about technology, leadership, and creating impactful solutions that transform businesses and empower communities.</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <div>
+                        <strong>Workspace/Professional Image</strong><br>
+                        Development setup or<br>
+                        professional environment<br>
+                        (500x400px)
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Driving Innovation Through Technology & Leadership</h3>
+                    <p>As a multi-disciplinary IT professional, I bring together deep technical expertise with proven leadership capabilities to deliver transformational solutions. My journey spans software development, AI/ML engineering, data science, network administration, and cybersecurity, complemented by extensive leadership experience in managing teams, projects, and organizational transformation.</p>
+                    
+                    <p>I specialize in building scalable platforms, implementing cutting-edge AI solutions, and leveraging data analytics to drive business insights. My passion lies in empowering teams, fostering innovation, and creating technology solutions that make a meaningful impact on organizations and communities.</p>
+                    
+                    <p>Having served in various executive leadership roles, including Chapter President of AIESEC, I understand the importance of inspirational leadership, team development, and strategic vision in driving organizational success.</p>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">People Led</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Technologies Mastered</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <div class="certifications-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">Professional Certifications</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Industry-recognized certifications validating expertise across multiple technology domains</p>
+            </div>
+            
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="certification-icon">🤖</div>
+                    <h3 class="certification-title">Google AI Essentials</h3>
+                    <p class="certification-issuer">Google - Coursera</p>
+                    <p style="margin-bottom: 1.5rem; font-size: 0.9rem; opacity: 0.8;">Comprehensive understanding of AI fundamentals, machine learning concepts, and practical AI implementation strategies.</p>
+                    <a href="#" class="cert-btn">View Certificate</a>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-icon">🔒</div>
+                    <h3 class="certification-title">IBM Cybersecurity Analyst</h3>
+                    <p class="certification-issuer">IBM - Coursera</p>
+                    <p style="margin-bottom: 1.5rem; font-size: 0.9rem; opacity: 0.8;">Advanced cybersecurity skills including threat detection, incident response, and security frameworks implementation.</p>
+                    <a href="#" class="cert-btn">View Certificate</a>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-icon">🌐</div>
+                    <h3 class="certification-title">Cisco Networking Essentials</h3>
+                    <p class="certification-issuer">Cisco Networking Academy</p>
+                    <p style="margin-bottom: 1.5rem; font-size: 0.9rem; opacity: 0.8;">Fundamental networking concepts, protocols, and hands-on experience with Cisco networking equipment.</p>
+                    <a href="#" class="cert-btn">View Certificate</a>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-icon">☁️</div>
+                    <h3 class="certification-title">Google Cloud Platform</h3>
+                    <p class="certification-issuer">Google Cloud</p>
+                    <p style="margin-bottom: 1.5rem; font-size: 0.9rem; opacity: 0.8;">Cloud architecture, deployment strategies, and management of scalable applications on GCP infrastructure.</p>
+                    <a href="#" class="cert-btn">View Certificate</a>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-icon">📊</div>
+                    <h3 class="certification-title">Microsoft Power BI</h3>
+                    <p class="certification-issuer">Microsoft Learn</p>
+                    <p style="margin-bottom: 1.5rem; font-size: 0.9rem; opacity: 0.8;">Advanced data visualization, dashboard creation, and business intelligence analytics using Power BI platform.</p>
+                    <a href="#" class="cert-btn">View Certificate</a>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-icon">🎯</div>
+                    <h3 class="certification-title">Project Management</h3>
+                    <p class="certification-issuer">PMI - Project Management Institute</p>
+                    <p style="margin-bottom: 1.5rem; font-size: 0.9rem; opacity: 0.8;">Comprehensive project management methodologies, Agile frameworks, and leadership in project execution.</p>
+                    <a href="#" class="cert-btn">View Certificate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Expertise</h2>
+                <p class="section-subtitle">Comprehensive skill set spanning multiple domains of technology and leadership</p>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skills-sidebar">
+                    <h3>Core Competencies</h3>
+                    <p>My expertise spans across multiple technological domains, from cutting-edge AI development to robust infrastructure management, combined with proven leadership capabilities that drive organizational transformation.</p>
+                    
+                    <div style="margin-top: 2rem;">
+                        <h4 style="color: #667eea; margin-bottom: 1rem;">Key Strengths:</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.5rem;">✓ Full-Stack Development</li>
+                            <li style="margin-bottom: 0.5rem;">✓ AI/ML Implementation</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Data-Driven Solutions</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Team Leadership</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Project Management</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>🚀 Software Development</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">Flutter</span>
+                            <span class="skill-tag">Laravel</span>
+                            <span class="skill-tag">WordPress</span>
+                            <span class="skill-tag">Node.js</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>🤖 AI & Machine Learning</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">LLM Integration</span>
+                            <span class="skill-tag">AI Agents</span>
+                            <span class="skill-tag">GenAI</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">OpenAI API</span>
+                            <span class="skill-tag">Hugging Face</span>
+                            <span class="skill-tag">AI Testing</span>
+                            <span class="skill-tag">Model Optimization</span>
+                            <span class="skill-tag">NLP</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>📊 Data Science & Analytics</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">Matplotlib</span>
+                            <span class="skill-tag">Data Visualization</span>
+                            <span class="skill-tag">Statistical Analysis</span>
+                            <span class="skill-tag">Big Data</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>☁️ Cloud & DevOps</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Google Cloud Platform</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Azure</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">Git & GitHub</span>
+                            <span class="skill-tag">CI/CD</span>
+                            <span class="skill-tag">Apache</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Serverless</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>🔐 Network & Cybersecurity</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Cisco Networking</span>
+                            <span class="skill-tag">Firewall Management</span>
+                            <span class="skill-tag">Network Security</span>
+                            <span class="skill-tag">Cybersecurity</span>
+                            <span class="skill-tag">Penetration Testing</span>
+                            <span class="skill-tag">Risk Assessment</span>
+                            <span class="skill-tag">Security Auditing</span>
+                            <span class="skill-tag">SIEM</span>
+                            <span class="skill-tag">VPN Configuration</span>
+                            <span class="skill-tag">Incident Response</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>🎯 Project & Leadership</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MS Project</span>
+                            <span class="skill-tag">Jira</span>
+                            <span class="skill-tag">Slack</span>
+                            <span class="skill-tag">Agile/Scrum</span>
+                            <span class="skill-tag">Team Management</span>
+                            <span class="skill-tag">Strategic Planning</span>
+                            <span class="skill-tag">Budget Management</span>
+                            <span class="skill-tag">Stakeholder Relations</span>
+                            <span class="skill-tag">Change Management</span>
+                            <span class="skill-tag">Mentoring</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ai-expertise" class="ai-showcase">
+        <div class="container">
+            <div class="ai-content">
+                <div class="ai-text">
+                    <h2>AI & Data Analytics Expertise</h2>
+                    <p>Specialized in cutting-edge artificial intelligence and data science solutions, with hands-on experience in LLM integration, AI agent development, and advanced analytics platforms.</p>
+                    
+                    <div class="ai-features">
+                        <div class="ai-feature">
+                            <h4>LLM Integration & Development</h4>
+                            <p>Expert in integrating Large Language Models (OpenAI, Claude, Gemini) into applications, fine-tuning for specific use cases, and optimizing performance for enterprise solutions.</p>
+                        </div>
+                        
+                        <div class="ai-feature">
+                            <h4>AI Agent Architecture</h4>
+                            <p>Designed and deployed intelligent AI agents with multi-modal capabilities, including the AI_Magerezani project featuring advanced conversational AI and automation workflows.</p>
+                        </div>
+                        
+                        <div class="ai-feature">
+                            <h4>Data Science & Visualization</h4>
+                            <p>Advanced expertise in data analysis, statistical modeling, and creating actionable insights through Power BI dashboards and custom analytics solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ai-visual">
+                    <div class="ai-demo-card">
+                        <h4>AI Model Performance</h4>
+                        <p>Performance metrics<br>& testing results</p>
+                    </div>
+                    <div class="ai-demo-card">
+                        <h4>Data Dashboards</h4>
+                        <p>Power BI analytics<br>& visualizations</p>
+                    </div>
+                    <div class="ai-demo-card">
+                        <h4>AI Agent Interface</h4>
+                        <p>Conversational AI<br>demo screenshots</p>
+                    </div>
+                    <div class="ai-demo-card">
+                        <h4>ML Workflows</h4>
+                        <p>Training pipelines<br>& deployment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Journey</h2>
+                <p class="section-subtitle">A progressive career path showcasing technical excellence and leadership impact</p>
+            </div>
+            
+            <div class="experience-container">
+                <div class="timeline">
+                    <!-- Row 1: ICT Tutor (Left) & Software Developer (Right) -->
+                    <div class="timeline-row">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <div class="timeline-date">Jan 2025 - Present</div>
+                                <div class="timeline-role">ICT & Computer Science Tutor</div>
+                                <div class="timeline-company">RAENA LEARNING CENTER</div>
+                                <ul class="timeline-achievements">
+                                    <li>Tutoring AS and A-Level students in ICT and Computer Science, providing comprehensive support in career planning for university admissions</li>
+                                    <li>Delivering well-tailored educational sessions covering Database Management, Network Architecture, and Cybersecurity fundamentals</li>
+                                    <li>Teaching Python Programming, Web Authoring, and Software Development Life Cycle (SDLC) methodologies to advanced students</li>
+                                    <li>Providing expertise in Spreadsheet Applications, Data Analytics, Document Production, and Professional Presentation techniques</li>
+                                    <li>Mentoring students in technology career pathways and preparing them for higher education in computer science disciplines</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item right">
+                            <div class="timeline-content">
+                                <div class="timeline-date">Jan 2025 - Present</div>
+                                <div class="timeline-role">Software Developer & AI Specialist</div>
+                                <div class="timeline-company">MTAALEX SOLUTIONS</div>
+                                <ul class="timeline-achievements">
+                                    <li>Spearheaded development of comprehensive web platform (mtaalexsolutions.co.ke) featuring eLearning Management System, e-commerce capabilities, and integrated payment gateways</li>
+                                    <li>Developed and deployed AI_Magerezani - an intelligent AI agent supporting natural language processing and automated user interactions</li>
+                                    <li>Architected and managed cloud infrastructure on GCP and AWS, ensuring 99.9% uptime and optimal performance</li>
+                                    <li>Implemented security protocols and data integrity measures protecting sensitive business and user data</li>
+                                    <li>Collaborated with cross-functional teams to translate business requirements into scalable software solutions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: IT Specialist (Left) & Board Advisor (Right) -->
+                    <div class="timeline-row">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <div class="timeline-date">June 2024 - Dec 2024</div>
+                                <div class="timeline-role">IT Specialist & Web Developer</div>
+                                <div class="timeline-company">IMAGE FIRST LIMITED</div>
+                                <ul class="timeline-achievements">
+                                    <li>Developed Digital Product Management Framework, streamlining product lifecycle and improving operational efficiency by 25%</li>
+                                    <li>Built full-featured e-commerce website using WordPress with responsive UI/UX, integrated payment systems, and inventory management</li>
+                                    <li>Created custom client portal using PHP and JavaScript, enhancing user experience and reducing support requests by 40%</li>
+                                    <li>Installed and configured enterprise firewall solutions, implementing network security protocols and monitoring systems</li>
+                                    <li>Led digital transformation initiatives, modernizing IT infrastructure and establishing scalable solutions for future growth</li>
+                                    <li>Managed network administration, hardware maintenance, and software troubleshooting across the organization</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item right">
+                            <div class="timeline-content">
+                                <div class="timeline-date">May 2023 - Current</div>
+                                <div class="timeline-role">Board of Advisors Member</div>
+                                <div class="timeline-company">AIESEC in Chuka</div>
+                                <ul class="timeline-achievements">
+                                    <li>Provide strategic guidance and mentorship to executive team, contributing to long-term organizational vision and sustainability</li>
+                                    <li>Collaborate with fellow advisors on organizational strategy refinement, ensuring alignment with AIESEC's global mission and values</li>
+                                    <li>Support leadership development initiatives and organizational capacity building programs</li>
+                                    <li>Contribute expertise in technology integration and digital transformation for youth leadership programs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Chapter President (Left) & Project Manager (Right) -->
+                    <div class="timeline-row">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <div class="timeline-date">Feb 2023 - Feb 2024</div>
+                                <div class="timeline-role">Chapter President</div>
+                                <div class="timeline-company">AIESEC in Chuka</div>
+                                <ul class="timeline-achievements">
+                                    <li>Led organization of 150+ members with 7-member Executive Board, implementing strategic initiatives that increased member engagement by 35%</li>
+                                    <li>Successfully facilitated 5 international exchange programs, managing partnerships with global AIESEC chapters</li>
+                                    <li>Pioneered digital transformation initiatives, introducing technology solutions that improved operational efficiency</li>
+                                    <li>Developed and implemented leadership development programs, resulting in 80% of members advancing to leadership roles</li>
+                                    <li>Managed annual budget of $50,000+, achieving 15% cost optimization while expanding program offerings</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item right">
+                            <div class="timeline-content">
+                                <div class="timeline-date">Nov 2022 - Feb 2023</div>
+                                <div class="timeline-role">Project Manager</div>
+                                <div class="timeline-company">ZINDUKA 6.0 & 7.0 - AIESEC Legacy Projects</div>
+                                <ul class="timeline-achievements">
+                                    <li>Directed end-to-end planning and execution of two large-scale projects, each accommodating 150 delegates from across East Africa</li>
+                                    <li>Managed partnerships with 10 corporate sponsors and stakeholders, securing Ksh 150,000+ in funding and resources</li>
+                                    <li>Coordinated 6 international keynote speakers and 20+ workshop facilitators, ensuring seamless event delivery</li>
+                                    <li>Implemented comprehensive engagement frameworks and feedback systems, achieving 95% participant satisfaction rate</li>
+                                    <li>Led cross-functional team of 25+ volunteers, demonstrating exceptional organizational and communication skills</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 4: Director Finance (Single) -->
+                    <div class="timeline-row">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-item single">
+                            <div class="timeline-content">
+                                <div class="timeline-date">Feb 2022 - Feb 2023</div>
+                                <div class="timeline-role">Director, Finance & Legal Affairs</div>
+                                <div class="timeline-company">AIESEC in Chuka</div>
+                                <ul class="timeline-achievements">
+                                    <li>Spearheaded financial restructuring initiatives, achieving 10% reduction in operational costs while maintaining program quality</li>
+                                    <li>Developed and implemented comprehensive financial management systems and reporting frameworks</li>
+                                    <li>Created and delivered financial literacy training programs for 100+ chapter members</li>
+                                    <li>Ensured legal compliance and risk management across all organizational activities and partnerships</li>
+                                    <li>Established sustainable funding models and diversified revenue streams for long-term organizational stability</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leadership" class="leadership-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">Leadership Excellence</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Proven track record in transformational leadership, team development, and organizational growth</p>
+            </div>
+            
+            <div class="leadership-content">
+                <div class="leadership-info">
+                    <h3 style="margin-bottom: 2rem;">Leadership Philosophy</h3>
+                    <p style="margin-bottom: 2rem; line-height: 1.7;">I believe in servant leadership that empowers teams, drives innovation, and creates lasting organizational transformation through strategic vision and inspirational guidance.</p>
+                    
+                    <div class="leadership-stats">
+                        <div class="leadership-stat">
+                            <div class="leadership-stat-number">150+</div>
+                            <div>Members Led</div>
+                        </div>
+                        <div class="leadership-stat">
+                            <div class="leadership-stat-number">Ksh80K+</div>
+                            <div>Budgets Managed</div>
+                        </div>
+                        <div class="leadership-stat">
+                            <div class="leadership-stat-number">5</div>
+                            <div>Major Projects</div>
+                        </div>
+                        <div class="leadership-stat">
+                            <div class="leadership-stat-number">80%</div>
+                            <div>Team Advancement</div>
+                        </div>
+                    </div>
+                    
+                    <h4 style="margin-top: 2rem; margin-bottom: 1rem; color: #89c7fd;">Core Leadership Skills:</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;">✓ Strategic Planning & Vision</li>
+                        <li style="margin-bottom: 0.5rem;">✓ Team Development & Mentoring</li>
+                        <li style="margin-bottom: 0.5rem;">✓ Change Management</li>
+                        <li style="margin-bottom: 0.5rem;">✓ Stakeholder Engagement</li>
+                        <li style="margin-bottom: 0.5rem;">✓ Budget & Resource Management</li>
+                    </ul>
+                </div>
+                
+                <div class="leadership-roles">
+                    <div class="leadership-role">
+                        <h4>Chapter President</h4>
+                        <div class="role-org">AIESEC in Chuka | Feb 2023 - Feb 2024</div>
+                        <ul class="leadership-achievements">
+                            <li>Led 150+ member organization with 7-member Executive Board</li>
+                            <li>Increased member engagement by 35% through strategic initiatives</li>
+                            <li>Managed annual budget of ksh 350,000+ with 15% cost optimization</li>
+                            <li>Facilitated 5 international exchange programs</li>
+                            <li>Achieved 80% member advancement to leadership roles</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="leadership-role">
+                        <h4>Project Manager - ZINDUKA 6.0 & 7.0</h4>
+                        <div class="role-org">AIESEC Legacy Projects | Nov 2022 - Feb 2023</div>
+                        <ul class="leadership-achievements">
+                            <li>Managed two large-scale events with 150 delegates each</li>
+                            <li>Secured $1,000+ in funding from 10 corporate sponsors</li>
+                            <li>Coordinated 6 international speakers and 20+ facilitators</li>
+                            <li>Led cross-functional team of 25+ volunteers</li>
+                            <li>Achieved 95% participant satisfaction rate</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="leadership-role">
+                        <h4>Director, Finance & Legal Affairs</h4>
+                        <div class="role-org">AIESEC in Chuka | Feb 2022 - Feb 2023</div>
+                        <ul class="leadership-achievements">
+                            <li>Reduced operational costs by 10% while maintaining quality</li>
+                            <li>Trained 100+ members in financial literacy</li>
+                            <li>Implemented comprehensive financial management systems</li>
+                            <li>Ensured legal compliance across all activities</li>
+                            <li>Established sustainable funding models</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="leadership-role">
+                        <h4>Board of Advisors Member</h4>
+                        <div class="role-org">AIESEC in Chuka | May 2023 - Current</div>
+                        <ul class="leadership-achievements">
+                            <li>Provide strategic guidance to executive team</li>
+                            <li>Support organizational capacity building programs</li>
+                            <li>Contribute to long-term sustainability planning</li>
+                            <li>Mentor emerging leaders in the organization</li>
+                            <li>Drive technology integration initiatives</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Comprehensive portfolio showcasing technical expertise across multiple domains</p>
+            </div>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="ai">AI & ML</button>
+                <button class="filter-btn" data-filter="data">Data Analytics</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="systems">Systems</button>
+                <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Web Development Projects -->
+                <div class="project-card show" data-category="web">
+                    <div class="project-media">
+                        <!-- IMAGE PLACEHOLDER: E-commerce platform screenshots, homepage, product pages, checkout process -->
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">E-Commerce Platform</div>
+                        <h3 class="project-title">Multi-Vendor E-Commerce Ecosystem</h3>
+                        <p class="project-description">Developed comprehensive e-commerce solutions for multiple clients including shop.imagefirst.shop and zealpackltd.com. Features include responsive design, secure payment integration, inventory management, customer portal, and admin dashboard with analytics.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Payment APIs</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="www.zealpack.com" class="project-link link-demo">Live Demo</a>
+                            <a href="#" class="project-link link-code">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card show" data-category="web">
+                    <div class="project-media">
+                        <!-- IMAGE PLACEHOLDER: Educational platform screenshots, course interface, student dashboard, admin panel -->
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Educational Platform</div>
+                        <h3 class="project-title">RaenaLearning.org - eLearning Management System</h3>
+                        <p class="project-description">Full-featured educational platform with course management, student tracking, assessment tools, progress analytics, and integration with payment systems for course purchases.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">AWS S3</span>
+                            <span class="tech-tag">Stripe API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="www.raenalearning.org" class="project-link link-demo">Visit Site</a>
+                            <a href="#" class="project-link link-code">Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card show" data-category="web">
+                    <div class="project-media">
+                        <!-- IMAGE PLACEHOLDER: Tourism website screenshots, booking interface, gallery, destination pages -->
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Tourism Platform</div>
+                        <h3 class="project-title">BundiezSafaris.co.ke - Travel & Tourism Platform</h3>
+                        <p class="project-description">Dynamic travel and tourism website with booking system, destination galleries, tour packages, customer reviews, payment integration, and content management system for tour operators.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Booking System</span>
+                            <span class="tech-tag">Payment Gateway</span>
+                            <span class="tech-tag">SEO</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="www.bundiezsafaris.co.ke" class="project-link link-demo">Visit Site</a>
+                            <a href="#" class="project-link link-code">Features</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI & ML Projects -->
+                <div class="project-card show" data-category="ai">
+                    <div class="project-media">
+                        <!-- IMAGE PLACEHOLDER: AI agent interface, conversation examples, dashboard, performance metrics -->
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Artificial Intelligence</div>
+                        <h3 class="project-title">AI Magerezani - Intelligent Virtual Assistant</h3>
+                        <p class="project-description">Advanced AI agent featuring natural language processing, multi-modal interactions, and intelligent automation capabilities. Integrated with LLMs for contextual understanding and deployed on cloud infrastructure for scalability.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenAI API</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">GCP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link link-demo">Try Demo</a>
+                            <a href="#" class="project-link link-code">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card show" data-category="ai">
+                    <div class="project-media">
+                        <!-- IMAGE PLACEHOLDER: ML model interface, training graphs, prediction results -->
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Machine Learning</div>
+                        <h3 class="project-title">Predictive Analytics Engine</h3>
+                        <p class="project-description">Custom machine learning models for business forecasting and predictive analytics. Includes data preprocessing pipelines, model training automation, and real-time prediction APIs.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link link-demo">View Results</a>
+                            <a href="#" class="project-link link-code">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Analytics Projects -->
+                <div class="project-card show" data-category="data">
+                    <div class="project-media">
+                        <!-- IMAGE PLACEHOLDER: Power BI dashboards, data visualizations, SQL query results, analytics reports -->
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Data Analytics</div>
+                        <h3 class="project-title">Business Intelligence Dashboard Suite</h3>
+                        <p class="project-description">Comprehensive data analytics solution using Power BI and SQL for multiple industries. Features include real-time KPI monitoring, predictive analytics, custom visualizations, and automated reporting systems.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">DAX</span>
+                            <span class="tech-tag">Azure</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link link-demo">View Dashboard</a>
+                            <a href="#" class="project-link link-code">Documentation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card show" data-category="data">
+                    <div class="project-media">
+                        <!-- IMAGE PLACEHOLDER: Data visualization charts, statistical analysis results -->
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Data Science</div>
+                        <h3 class="project-title">Market Research Analytics Platform</h3>
+                        <p class="project-description">Advanced data science platform for market research and consumer behavior analysis. Includes statistical modeling, trend analysis, and interactive visualization dashboards.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Matplotlib</span>
+                            <span class="tech-tag">Seaborn</span>
+                            <span class="tech-tag">Jupyter</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Plotly</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link link-demo">View Analysis</a>
+                            <a href="#" class="project-link link-code">Notebooks</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Apps Projects -->
+                <div class="project-card show" data-category="mobile">
+                    <div class="project-media">
+                        <!-- IMAGE PLACEHOLDER: Mobile app screenshots, different screens, UI/UX designs, app store listings -->
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Mobile Development</div>
+                        <h3 class="project-title">Cross-Platform Mobile Applications</h3>
+                        <p class="project-description">Developed multiple mobile applications using Flutter and React Native, focusing on user experience, performance optimization, offline capabilities, and seamless cross-platform functionality.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">RESTful APIs</span>
+                            <span class="tech-tag">SQLite</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link link-demo">App Preview</a>
+                            <a href="#" class="project-link link-code">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Systems Projects -->
+                <div class="project-card show" data-category="systems">
+                    <div class="project-media">
+                        <!-- IMAGE PLACEHOLDER: System interface, parking management dashboard, real-time monitoring, payment processing -->
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">System Development</div>
+                        <h3 class="project-title">Urban Parking Management System</h3>
+                        <p class="project-description">Comprehensive Java-based parking management platform featuring object-oriented design, real-time space tracking, automated billing, payment processing, and administrative dashboard with analytics.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">RESTful APIs</span>
+                            <span class="tech-tag">JUnit</span>
+                            <span class="tech-tag">Maven</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link link-demo">System Demo</a>
+                            <a href="#" class="project-link link-code">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card show" data-category="systems">
+                    <div class="project-media">
+                        <!-- IMAGE PLACEHOLDER: Inventory management interface, stock tracking, reporting dashboard -->
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Enterprise System</div>
+                        <h3 class="project-title">Digital Product Management Framework</h3>
+                        <p class="project-description">Enterprise-level product management system with inventory tracking, supplier management, automated ordering, and comprehensive reporting capabilities for business optimization.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link link-demo">Live Demo</a>
+                            <a href="#" class="project-link link-code">Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Infrastructure Projects -->
+                <div class="project-card show" data-category="infrastructure">
+                    <div class="project-media">
+                        <!-- IMAGE PLACEHOLDER: Network diagrams, cloud architecture, monitoring dashboards, security configurations -->
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Cloud Infrastructure</div>
+                        <h3 class="project-title">Enterprise Cloud Architecture & Security</h3>
+                        <p class="project-description">Designed and implemented scalable cloud solutions on GCP and AWS, including containerization with Docker/Kubernetes, CI/CD pipelines, monitoring systems, and comprehensive security protocols.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Google Cloud</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Monitoring</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link link-demo">Architecture</a>
+                            <a href="#" class="project-link link-code">Documentation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card show" data-category="infrastructure">
+                    <div class="project-media">
+                        <!-- IMAGE PLACEHOLDER: Network security dashboard, firewall configurations, monitoring tools -->
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Network Security</div>
+                        <h3 class="project-title">Enterprise Network Security Implementation</h3>
+                        <p class="project-description">Comprehensive network security solution including firewall configuration, intrusion detection systems, VPN setup, and continuous monitoring for enterprise environments.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Cisco</span>
+                            <span class="tech-tag">pfSense</span>
+                            <span class="tech-tag">SIEM</span>
+                            <span class="tech-tag">VPN</span>
+                            <span class="tech-tag">Network Monitoring</span>
+                            <span class="tech-tag">Security Auditing</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link link-demo">View Implementation</a>
+                            <a href="#" class="project-link link-code">Security Report</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">Ready to collaborate on innovative projects and transformational initiatives</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 style="margin-bottom: 2rem; color: var(--text-primary);">Get In Touch</h3>
+                    <p style="margin-bottom: 2rem; color: var(--text-secondary); line-height: 1.7;">I'm always excited to discuss new opportunities, collaborate on innovative projects, or share insights about technology and leadership. Let's connect and explore how we can create impactful solutions together.</p>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: #667eea; margin-bottom: 1rem;">Areas of Interest:</h4>
+                        <ul style="list-style: none; padding: 0; color: var(--text-secondary);">
+                            <li style="margin-bottom: 0.5rem;">• AI/ML Development Projects</li>
+                            <li style="margin-bottom: 0.5rem;">• Data Science Consulting</li>
+                            <li style="margin-bottom: 0.5rem;">• Software Architecture & Development</li>
+                            <li style="margin-bottom: 0.5rem;">• Leadership & Mentoring Opportunities</li>
+                            <li style="margin-bottom: 0.5rem;">• Technology Strategy & Innovation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <a href="mailto:amosmn4@gmail.com">amosmn4@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <h3>Phone</h3>
+                        <a href="tel:+254745600377">+254745600377</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <h3>Location</h3>
+                        <p>Nairobi, Kenya</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <h3>LinkedIn</h3>
+                        <a href="https://linkedin.com/in/amos-nyamai" target="_blank">linkedin.com/in/amos-nyamai</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💻</div>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/amosmn4" target="_blank">github.com/amosmn4</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🌐</div>
+                        <h3>Portfolio</h3>
+                        <a href="https://mtaalexsolutions.co.ke" target="_blank">mtaalexsolutions.co.ke</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Project filtering functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.classList.add('show');
+                    } else {
+                        if (card.getAttribute('data-category') === filter) {
+                            card.classList.add('show');
+                        } else {
+                            card.classList.remove('show');
+                        }
+                    }
+                });
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animations
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(20px)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.backdropFilter = 'blur(15px)';
+            }
+        });
+
+        // Timeline animations with staggered delays
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        timelineItems.forEach((item, index) => {
+            item.style.animationDelay = `${index * 0.1}s`;
+        });
+
+        // Initialize - Show all projects by default
+        projectCards.forEach(card => {
+            card.classList.add('show');
+        });
+    </script>
+</body>
+</html>
